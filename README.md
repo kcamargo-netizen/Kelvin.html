@@ -40,7 +40,7 @@
 
     <tr>
         <td><input type="text" value="Brasil"></td>
-        <td><input type="number" value="30"></td>
+        <td><input type="number" value="20"></td>
     </tr>
 
     <tr>
@@ -82,14 +82,6 @@ function simular() {
     let selecoes = [];
 
     for (let i = 1; i < tabela.rows.length; i++) {
-        // Continuação não aparece na foto
-    }
-}
-</script>
-
-</body>
-</html>
-
 const nome = tabela.rows[i].cells[0].children[0].value;
 const prob = parseFloat(tabela.rows[i].cells[1].children[0].value);
 selecoes.push({nome, prob});
@@ -110,11 +102,9 @@ while (fase.length > 1) {
                 fase[i].nome,
                 fase[i].prob,
                 fase[i + 1].nome,
-                fase[i + 1].prob
-            );
+                fase[i + 1].prob);
 
-            texto += fase[i].nome + " vs " + fase[i + 1].nome +
-                     " → <b>" + vencedor + "</b><br>";
+            texto += fase[i].nome + " vs " + fase[i + 1].nome +  " → <b>" + vencedor + "</b><br>";
 
             novaFase.push({
                 nome: vencedor,
